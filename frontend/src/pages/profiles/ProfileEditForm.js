@@ -95,7 +95,12 @@ const ProfileEditForm = () => {
           rows={7}
         />
       </Form.Group>
-
+      <Form.Group>
+        <Form.Label>Select Team</Form.Label>
+        <Form.Control as="select" method="GET" action={supported_team}>
+                <option value="supported_team">{}</option>
+        </Form.Control>
+      </Form.Group>
       {errors?.content?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
@@ -103,7 +108,7 @@ const ProfileEditForm = () => {
       ))}
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
-        onClick={() => history.push()}
+        onClick={() => history.goBack()}
       >
         cancel
       </Button>

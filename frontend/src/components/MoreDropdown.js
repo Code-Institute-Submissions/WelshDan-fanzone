@@ -53,16 +53,10 @@ export function ProfileEditDropdown({ id }) {
       <Dropdown.Toggle as={ThreeDots} />
       <Dropdown.Menu>
         <Dropdown.Item
-          onClick={() => history.push(`/profiles/${id}/edit/team`)}
-          aria-label="edit-team"
-        >
-          <i className="fas fa-heart" /> change team
-        </Dropdown.Item>
-        <Dropdown.Item
           onClick={() => history.push(`/profiles/${id}/edit`)}
           aria-label="edit-profile"
         >
-          <i className="fas fa-edit" /> edit profile
+          <i className="fas fa-edit" /> change profile <i className="fas fa-heart" />  team
         </Dropdown.Item>
         <Dropdown.Item
           onClick={() => history.push(`/profiles/${id}/edit/username`)}

@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
 
 import Asset from "../../components/Asset";
 
@@ -65,14 +64,8 @@ function ProfilePage() {
                         src={profile?.image}
                     />
                 </Col>
-                <Col lg={3} className="text-lg-right">
-                    <Form.Control as="select">
-                        <Form.Label>Select Team</Form.Label>
-                        <Form.Control/>
-                            <option value="supported_team">{profile?.supported_team.team}</option>
-                    </Form.Control>
-                </Col>
-                <Col lg={6}>
+
+                <Row lg={6}>
                     <h3 className="m-2">{profile?.owner}</h3>
                     <Row className='justify-content-center no-gutters'>
                         <Col xs={3} className="my-2">
@@ -88,7 +81,13 @@ function ProfilePage() {
                             <div>following</div>
                         </Col>
                     </Row>
-                </Col>
+                    <Row className='justify-content-center no-gutters'>
+                        <Col xs={3} className="my-2">
+                            <div>{profile?.team}</div>
+                            <div>My team: team</div>
+                        </Col>
+                    </Row>
+                </Row>
                 <Col lg={3} className="text-lg-right">
                     {currentUser &&
                         !is_owner &&

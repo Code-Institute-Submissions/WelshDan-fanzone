@@ -72,7 +72,7 @@ const UsernameForm = () => {
             ))}
             <Button
               className={`${btnStyles.Button} ${btnStyles.Blue}`}
-              onClick={() => history.push()}
+              onClick={() => history.goBack()}
             >
               cancel
             </Button>

@@ -5,13 +5,10 @@ from .models import TeamsList
 
 
 class TeamsListSerializer(serializers.ModelSerializer):
-    team_choices = serializers.SerializerMethodField()
 
     class Meta:
         model = TeamsList
         fields = [
-            'id', 'team'
+            'id', 'team', 
         ]
-    
-    def get_team_choices(self, obj):
-        return TeamsList.objects.all()
+
