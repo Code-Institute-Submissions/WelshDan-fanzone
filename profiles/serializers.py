@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import Profile
 from followers.models import Follower
+from supported.models import TeamsList
 
 
 class ProfileSerializer(serializers.ModelSerializer):

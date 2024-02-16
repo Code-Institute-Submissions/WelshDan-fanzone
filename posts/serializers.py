@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from posts.models import Post
 from likes.models import Like
+from supported.models import TeamsList
 
 
 class PostSerializer(serializers.ModelSerializer):
@@ -40,12 +41,12 @@ class PostSerializer(serializers.ModelSerializer):
             return like.id if like else None
         return None
 
+
     class Meta:
         model = Post
         fields = [
             'id', 'owner', 'is_owner', 'profile_id', 'profile_image',
             'created_at', 'updated_at', 'title',
             'content', 'image', 'like_id',
-            'supported_team',
             'likes_count', 'comments_count',
         ]

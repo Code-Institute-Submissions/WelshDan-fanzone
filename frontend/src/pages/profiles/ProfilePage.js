@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
 
 import Asset from "../../components/Asset";
 
@@ -63,6 +64,13 @@ function ProfilePage() {
                         roundedCircle
                         src={profile?.image}
                     />
+                </Col>
+                <Col lg={3} className="text-lg-right">
+                    <Form.Control as="select">
+                        <Form.Label>Select Team</Form.Label>
+                        <Form.Control/>
+                            <option value="supported_team">{profile?.supported_team.team}</option>
+                    </Form.Control>
                 </Col>
                 <Col lg={6}>
                     <h3 className="m-2">{profile?.owner}</h3>

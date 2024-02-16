@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import TeamsList
 
-# Register your models here.
+
+admin.site.register(TeamsList)

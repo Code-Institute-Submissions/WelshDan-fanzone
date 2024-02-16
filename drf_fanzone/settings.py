@@ -62,6 +62,7 @@ ALLOWED_HOSTS = [
     'drf-fanzone-dfbf06e05b90.herokuapp.com',
     '8000-welshdan-fanzone-uwpd5hidx19.ws-us108.gitpod.io',
     'localhost',
+    '8000-welshdan-fanzone-uwpd5hidx19.ws-eu108.gitpod.io',
 ]
 
 # Application definition

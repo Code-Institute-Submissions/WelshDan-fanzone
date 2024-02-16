@@ -74,6 +74,7 @@ function PostCreateForm() {
 
     const textFields = (
         <div className="text-center">
+   
             <Form.Group>
                 <Form.Label>Title</Form.Label>
                 <Form.Control

@@ -478,7 +478,10 @@ There are a few errors and bugs remaining:
 - The profile avatar is not connecting in posts and show only a broken image icon
 - On logging out, the home feed is still shown. Users cannot however comment on posts
 - Automatic tests were not added to all functions
+- Information messages have not been added
 - Error messages are the default messages
+- There needs to be more Validation checks
+- Lighthouse does not return a very good rating. The website needs to be 'cleaned up'
 
 Testing results:
 
