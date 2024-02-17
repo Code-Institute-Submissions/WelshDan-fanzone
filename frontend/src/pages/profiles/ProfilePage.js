@@ -64,8 +64,7 @@ function ProfilePage() {
                         src={profile?.image}
                     />
                 </Col>
-
-                <Row lg={6}>
+                <Col lg={6}>
                     <h3 className="m-2">{profile?.owner}</h3>
                     <Row className='justify-content-center no-gutters'>
                         <Col xs={3} className="my-2">
@@ -82,12 +81,9 @@ function ProfilePage() {
                         </Col>
                     </Row>
                     <Row className='justify-content-center no-gutters'>
-                        <Col xs={3} className="my-2">
-                            <div>{profile?.team}</div>
-                            <div>My team: team</div>
-                        </Col>
+                            <div>My team: {profile?.team}</div>
                     </Row>
-                </Row>
+                </Col>    
                 <Col lg={3} className="text-lg-right">
                     {currentUser &&
                         !is_owner &&
