@@ -98,7 +98,7 @@ const ProfileEditForm = () => {
       <Form.Group>
         <Form.Label>Select Team</Form.Label>
         <Form.Control as="select" method="GET" action={supported_team}>
-                <option value="supported_team">{}</option>
+                <option value="supported_team">{supported_team}</option>   
         </Form.Control>
       </Form.Group>
       {errors?.content?.map((message, idx) => (
