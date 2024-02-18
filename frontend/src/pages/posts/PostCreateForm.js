@@ -25,12 +25,12 @@ function PostCreateForm() {
     const [errors, setErrors] = useState({});
 
     const [postData, setPostData] = useState({
-        team: "",
+        supported_team: "",
         title: "",
         content: "",
         image: "",
     });
-    const { team, title, content, image } = postData;
+    const { supported_team, title, content, image } = postData;
 
     const imageInput = useRef(null);
     const history = useHistory();
@@ -56,7 +56,7 @@ function PostCreateForm() {
         event.preventDefault();
         const formData = new FormData();
 
-        formData.append("team", team);
+        formData.append("supported_team", supported_team);
         formData.append("title", title);
         formData.append("content", content);
         formData.append("image", imageInput.current.files[0]);
@@ -74,7 +74,17 @@ function PostCreateForm() {
 
     const textFields = (
         <div className="text-center">
-   
+            <Form.Group>
+                <Form.Label>Select Team</Form.Label>
+                <Form.Control as="select" method="GET" action={supported_team}>
+                        <option value="supported_team">{supported_team}</option>   
+                </Form.Control>
+            </Form.Group>
+            {errors?.content?.map((message, idx) => (
+                <Alert variant="warning" key={idx}>
+                {message}
+                </Alert>
+            ))}
             <Form.Group>
                 <Form.Label>Title</Form.Label>
                 <Form.Control
