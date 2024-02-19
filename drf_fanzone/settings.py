@@ -57,12 +57,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = 'DEBUG' in os.environ
 
 ALLOWED_HOSTS = [
-    os.environ.get('ALLOWED_HOST'),
-    '8000-welshdan-fanzone-g3ncgzao1j.us2.codeanyapp.com',
-    'drf-fanzone-dfbf06e05b90.herokuapp.com',
-    '8000-welshdan-fanzone-6b7lriqhy8h.vss.gitpod.io',
+    os.environ.get('ALLOWED_HOSTS'),
     'localhost',
-    '8000-welshdan-fanzone-6b7lriqhy8h.ws-us108.gitpod.io'
 ]
 
 # Application definition
@@ -107,10 +103,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-if 'CLIENT_ORIGIN' in os.environ: 
-    CORS_ALLOWED_ORIGINS = [
+CORS_ALLOWED_ORIGINS = [
         os.environ.get('CLIENT_ORIGIN')
-    ]
+]
 
 CORS_ALLOW_CREDENTIALS = True
 
