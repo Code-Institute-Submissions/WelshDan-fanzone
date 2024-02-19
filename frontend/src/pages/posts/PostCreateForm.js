@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -22,18 +22,36 @@ import { useRedirect } from "../../hooks/useRedirect";
 
 function PostCreateForm() {
     useRedirect("loggedOut");
+    const history = useHistory();
     const [errors, setErrors] = useState({});
 
     const [postData, setPostData] = useState({
         supported_team: "",
+        teams: [],
         title: "",
         content: "",
         image: "",
     });
-    const { supported_team, title, content, image } = postData;
+    const { supported_team, teams, title, content, image } = postData;
+
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const { data : { results } } = await axiosReq.get('/supported/');
+            console.log(results)
+            setPostData(prevState => ({
+              ...prevState,
+              teams: [...results],
+            }));
+          } catch (err) {
+            history.push("/");
+          }
+        };
+    
+        fetchData();
+    }, [history]);
 
     const imageInput = useRef(null);
-    const history = useHistory();
 
     const handleChange = (event) => {
         setPostData({
@@ -76,8 +94,16 @@ function PostCreateForm() {
         <div className="text-center">
             <Form.Group>
                 <Form.Label>Select Team</Form.Label>
-                <Form.Control as="select" method="GET" action={supported_team}>
-                        <option value="supported_team">{supported_team}</option>   
+                <Form.Control
+                    as="select"
+                    value={supported_team}
+                    onChange={handleChange}
+                    name="supported_team"
+                >
+                <option value="">Select Team</option>
+                    {teams.map(team => (
+                        <option key={team.id} value={team.id}>{team.team}</option>
+                    ))}
                 </Form.Control>
             </Form.Group>
             {errors?.content?.map((message, idx) => (
