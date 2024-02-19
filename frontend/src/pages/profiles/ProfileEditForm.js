@@ -30,10 +30,29 @@ const ProfileEditForm = () => {
     content: "",
     image: "",
     supported_team: "",
+    teams: [],
   });
-  const { name, content, image, supported_team } = profileData;
+  const { name, content, image, supported_team, teams } = profileData;
 
   const [errors, setErrors] = useState({});
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const { data : teamsData } = await axiosReq.get('/teams/');
+        const { data } = await axiosReq.get(`/profiles/${id}/`);
+        setProfileData(prevState => ({
+          ...prevState,
+          ...data,
+          teams: teamsData,
+        }));
+      } catch (err) {
+        history.push("/");
+      }
+    };
+
+    fetchData();
+  }, [history, id]);
 
   useEffect(() => {
     const handleMount = async () => {
@@ -98,8 +117,16 @@ const ProfileEditForm = () => {
       </Form.Group>
       <Form.Group>
         <Form.Label>Select Team</Form.Label>
-        <Form.Control as="select" method="GET" action={supported_team}>
-                <option value="supported_team">{supported_team}</option>   
+        <Form.Control
+          as="select"
+          value={supported_team}
+          onChange={handleChange}
+          name="supported_team"
+        >
+          <option value="">Select Team</option>
+          {teams.map(team => (
+            <option key={team.id} value={team.id}>{team.name}</option>
+          ))}
         </Form.Control>
       </Form.Group>
       {errors?.content?.map((message, idx) => (
