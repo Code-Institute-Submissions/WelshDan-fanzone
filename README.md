@@ -227,7 +227,7 @@ To deploy in Heroku, you'll need to do the following things once logged in:
 - CLOUDINARY_URL
 - DATABASE_URL
 - DEBUG (only used during development)
-- DISABLE_COLLECTSTAIC (only used during development)
+- DISABLE_COLLECTSTATIC (only used during development)
 - POSTRESQL_DB
 - POSTGRESQL_ENGINE
 - SECRET_KEY
