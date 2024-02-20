@@ -450,7 +450,7 @@ I have tried to follow the guidelines as explained in this simple table from [Re
 | 30 | Front       | Profile        | User can change password                                                      | Clicking on edit profile links to edit password page                   | Yes   |                                                      |
 | 31 | Front       | Home Feed      | User can see all posts                                                        | All posts should be available to the user                              | Yes   |                                                      |
 | 32 | Front       | Supported Feed | User can see posts of supported teams                                         | Only those posts should be shown                                       | No    | All posts are shown                                  |
-| 33 | Front       | Liked Feed     | User can see posts that he has liked or commented on                          | Only those posts should be shown                                       | Yes    |                                                     |
+| 33 | Front       | Liked Feed     | User can see posts that he has liked or commented on                          | Only those posts should be shown                                       | Yes   |                                                      |
 
 Backend tests that were run include:
 

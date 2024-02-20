@@ -9,5 +9,7 @@
 .Asset img {
     width: 100%;
     height: 100%;
+    max-width: 6400px;
+    max-height: 480px;
     object-fit: contain;
 }

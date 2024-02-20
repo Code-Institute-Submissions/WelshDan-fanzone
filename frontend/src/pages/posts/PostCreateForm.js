@@ -106,7 +106,7 @@ function PostCreateForm() {
                     ))}
                 </Form.Control>
             </Form.Group>
-            {errors?.content?.map((message, idx) => (
+            {errors?.supported_team?.map((message, idx) => (
                 <Alert variant="warning" key={idx}>
                 {message}
                 </Alert>
