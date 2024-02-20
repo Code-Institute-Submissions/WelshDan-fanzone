@@ -39,12 +39,12 @@ const ProfileEditForm = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { data : teamsData } = await axiosReq.get('/supported/');
+        const { data : { results } } = await axiosReq.get('/supported/');
         const { data } = await axiosReq.get(`/profiles/${id}/`);
         setProfileData(prevState => ({
           ...prevState,
           ...data,
-          teams: teamsData,
+          teams: [...results],
         }));
       } catch (err) {
         history.push("/");
@@ -124,8 +124,8 @@ const ProfileEditForm = () => {
           name="supported_team"
         >
           <option value="">Select Team</option>
-          {teams.map(team => (
-            <option key={team.id} value={team.id}>{team.name}</option>
+          {teams && teams.map(team => (
+            <option key={team.id} value={team.id}>{team.team}</option>
           ))}
         </Form.Control>
       </Form.Group>

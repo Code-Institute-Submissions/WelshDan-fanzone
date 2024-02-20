@@ -38,7 +38,6 @@ function PostCreateForm() {
         const fetchData = async () => {
           try {
             const { data : { results } } = await axiosReq.get('/supported/');
-            console.log(results)
             setPostData(prevState => ({
               ...prevState,
               teams: [...results],
