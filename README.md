@@ -502,6 +502,8 @@ Testing results:
 
 **Test Profiles**
 
+For the purpose of development I have used the inlog for Sam
+
 Admin
 
 - admin / admin12345
