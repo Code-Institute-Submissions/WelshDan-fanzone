@@ -38,6 +38,7 @@ function PostCreateForm() {
         const fetchData = async () => {
           try {
             const { data : { results } } = await axiosReq.get('/supported/');
+
             setPostData(prevState => ({
               ...prevState,
               teams: [...results],
@@ -100,7 +101,7 @@ function PostCreateForm() {
                     name="supported_team"
                 >
                 <option value="">Select Team</option>
-                    {teams.map(team => (
+                    {teams && teams.map(team => (
                         <option key={team.id} value={team.id}>{team.team}</option>
                     ))}
                 </Form.Control>

@@ -537,8 +537,8 @@ Github "Milestones
 
 Starting the app required two terminals open (I chose a split terminal)
 
-1. Starting Django from the backend
-2. Starting React js from the frontend.
+1. Starting Django from the backend - must always be run first
+2. Starting React js from the frontend - must be run once the backend is running
 
 To start the app, I started with these codes in terminal 1:
 
