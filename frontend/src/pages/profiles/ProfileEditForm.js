@@ -39,7 +39,7 @@ const ProfileEditForm = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { data : teamsData } = await axiosReq.get('/teams/');
+        const { data : teamsData } = await axiosReq.get('/supported/');
         const { data } = await axiosReq.get(`/profiles/${id}/`);
         setProfileData(prevState => ({
           ...prevState,
