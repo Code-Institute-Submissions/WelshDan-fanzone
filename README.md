@@ -452,6 +452,11 @@ I have tried to follow the guidelines as explained in this simple table from [Re
 | 32 | Front       | Supported Feed | User can see posts of supported teams                                         | Only those posts should be shown                                       | No    | All posts are shown                                  |
 | 33 | Front       | Liked Feed     | User can see posts that he has liked or commented on                          | Only those posts should be shown                                       | Yes   |                                                      |
 
+Extra tests:
+
+- Adding a post doesn't save the supported team to the post but it does save it to the api
+- Profile Page only shows the id of the supported team and not the team name. It does show the team name when a user tries to change it in Profile Edit
+
 Backend tests that were run include:
 
 - Tests can list posts
@@ -481,7 +486,7 @@ There are a few errors and bugs remaining:
 - Information messages have not been added
 - Error messages are the default messages
 - There needs to be more Validation checks
-- Lighthouse does not return a very good rating. The website needs to be 'cleaned up'
+- Lighthouse does not return a very good rating. The website needs to be 'cleaned up'. Image files should be run through a resizing tool like Pillow or OpenCV to reduce image size and speed up loading time.
 
 Testing results:
 
@@ -509,7 +514,7 @@ Users
 - TaraTaylor / TaraPassword1
 - Sam / SamPassword
 - Sally / SallyPassword
-- 
+- Solomon / SolomonPassword
 
 ---
 

@@ -81,7 +81,7 @@ function ProfilePage() {
                         </Col>
                     </Row>
                     <Row className='justify-content-center no-gutters'>
-                            <div>My team: {profile?.supported_team}</div>
+                            <div>My team: {profile?.team}</div>
                     </Row>
                 </Col>    
                 <Col lg={3} className="text-lg-right">
