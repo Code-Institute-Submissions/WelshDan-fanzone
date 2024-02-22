@@ -180,6 +180,9 @@ There are 5 reusable components in Fanzone:
 | NavBar.js       | Used for the main NavBar and contains the icons and their links                                                      | 1          |
 | PageNotFound.js | A replacement of the 404 file, this page is connected to the App.js file and is used when a wrong address is entered | 1          |
 
+The major custom part of the website was the supported section. The aim of this was to provide the user with a choice of teams to select as their "supported" team and then this would open up the supported feed, which will filter all of the posts that have been created with that team's name as the supported team for that post (i.e. the team that the post is about).
+
+There are some small parts that have not been completed in this custom function. Setting up the correct team values was not set up completely.
 
 #### 2.4 Deployment: How to deploy the Front-End
 
@@ -441,7 +444,7 @@ I have tried to follow the guidelines as explained in this simple table from [Re
 | 21 | Front       | Feed           | Click on ball (like)                                                          | Adds 1 to the number of likes for that post                            | Yes   |                                                      |
 | 22 | Front       | Feed           | Click on ball (like) again                                                    | Takes away 1 to the number of likes for that post                      | Yes   |                                                      |
 | 23 | Front       | Feed           | Click on speech bubble (comment)                                              | Opens post and comment content                                         | Yes   |                                                      |
-| 24 | Front       | Feed           | User can delete own posts                                                     | "Three dots" are visible                                               | No    | Option to edit or delete post not available          |
+| 24 | Front       | Feed           | User can delete own posts                                                     | "Three dots" are visible on home screen                                              | No    | User needs to click om post to edit/delete          |
 | 25 | Front       | Feed           | Scroll down                                                                   | Infinite feed activates and user can scroll to bottom                  | Yes   |                                                      |
 | 26 | Front       | Profile        | On opening profile                                                            | User can see all his posts and user stats                              | Yes   |                                                      |
 | 27 | Front       | Profile        | User can delete own posts                                                     | "Three dots" are visible                                               | No    | Option to edit or delete post not available          |
@@ -454,7 +457,7 @@ I have tried to follow the guidelines as explained in this simple table from [Re
 
 Extra tests:
 
-- Adding a post doesn't save the supported team to the post but it does save it to the api
+- Adding a post doesn't save the supported team to the post but it does save it to the api - CORRECTED
 - Profile Page only shows the id of the supported team and not the team name. It does show the team name when a user tries to change it in Profile Edit
 
 Backend tests that were run include:
@@ -476,6 +479,10 @@ And also the localhost: 8000 (API for DRF), was checked for the following things
 
 #### 4.2 Version Control: Usage of Git and Githug for version control, incl explanation of commit messages
 
+The goal was to add and commit after changes and to push after several changes were made. As CodeAnywhere became more unpredictable then the pushes became more frequent.
+
+My aim was to use a descriptive word at the start of the commits to explain as economically as possible using the minimal amount of words to explain what was changed.
+
 #### 4.3 Remaining errors after testing
 
 There are a few errors and bugs remaining:
@@ -494,8 +501,8 @@ Testing results:
 | -- | ----------- | -------------- | --------------------------------------------------------- | ------------------------------------- | ----- | ---------------------------------------------------- |
 | 10 | Front       | NavBar         | Clicking "sign out" icon                                  | Logs out user/links to "sign up" page | No    | User remains in home feed though they cannot comment |
 | 15 | Front       | Add Post       | After posting, avatar image, title, content are all shown | Avatar image, title, content created  | No    | Avatar image is not shown                            |
-| 24 | Front       | Feed           | User can delete own posts                                 | "Three dots" are visible              | No    | Option to edit or delete post not available          |
-| 27 | Front       | Profile        | User can delete own posts                                 | "Three dots" are visible              | No    | Option to edit or delete post not available          |
+| 24 | Front       | Feed           | User can delete own posts                                 | "Three dots" are visible              | No    | Option to edit or delete post not available - this is true but posts can be altered by clicking on the post        |
+| 27 | Front       | Profile        | User can delete own posts                                 | "Three dots" are visible              | No    | Option to edit or delete post not available - this is true but posts can be altered by clicking on the post        |
 | 32 | Front       | Supported Feed | User can see posts of supported teams                     | Only those posts should be shown      | No    | All posts are shown                                  |                              |
 
 #### 4.4 Other issues and information
@@ -629,5 +636,5 @@ issues with the development of Fanzone:
 - My Mentor Akshat Garg
 - Slack, the business messaging app, and its users, for help with issues
   including lines too long errors and cookie refresh errors
-- Keith Herne
+- Keith Herne, especially for help with the support_page issues.
 - Abhi Shek
