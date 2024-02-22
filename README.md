@@ -493,7 +493,7 @@ There are a few errors and bugs remaining:
 - Information messages have not been added
 - Error messages are the default messages
 - There needs to be more Validation checks
-- Lighthouse does not return a very good rating. The website needs to be 'cleaned up'. Image files should be run through a resizing tool like Pillow or OpenCV to reduce image size and speed up loading time.
+- Lighthouse does not return a very good rating. The website needs to be 'cleaned up'. Image files should be run through a resizing tool like Pillow or OpenCV to reduce image size and speed up loading time (I have installed django-imagekit to reduce image file size. the default size is w640px x h480px)
 
 Testing results:
 
