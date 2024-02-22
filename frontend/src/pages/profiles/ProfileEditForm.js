@@ -154,7 +154,7 @@ const ProfileEditForm = () => {
             <Form.Group>
               {image && (
                 <figure>
-                  <Image src={image} fluid />
+                  <Image src={image} alt={"users new image"} fluid />
                 </figure>
               )}
               {errors?.image?.map((message, idx) => (

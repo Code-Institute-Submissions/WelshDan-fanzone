@@ -119,6 +119,7 @@ function SignInForm() {
                 <Image
                     className={`${appStyles.FillerImage}`}
                     src={"https://cdn.pixabay.com/photo/2016/11/29/02/05/audience-1866738_1280.jpg"}
+                    alt={"stadium picture for sign in form"}
                 />
             </Col>
         </Row>

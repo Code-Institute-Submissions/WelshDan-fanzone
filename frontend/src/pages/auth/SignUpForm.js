@@ -119,6 +119,7 @@ const SignUpForm = () => {
                     src={
                         "https://cdn.pixabay.com/photo/2018/05/15/23/02/football-stadium-3404535_1280.jpg"
                     }
+                    alt={"image of a large football stadium"}
                 />
             </Col>
         </Row>

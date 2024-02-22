@@ -135,7 +135,7 @@ function PostEditForm() {
             >
                 <Form.Group className="text-center">
                     <figure>
-                        <Image className={appStyles.Image} src={image} rounded />
+                        <Image className={appStyles.Image} alt={"users avatar profile image"} src={image} rounded />
                     </figure>
                     <div>
                         <Form.Label
