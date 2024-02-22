@@ -23,6 +23,7 @@ const Post = (props) => {
         updated_at,
         postPage,
         setPosts,
+        supported_team,
     } = props;
 
     const currentUser = useCurrentUser();
@@ -79,6 +80,9 @@ const Post = (props) => {
                         <Avatar src={profile_image} height={55} />
                         {owner}
                     </Link>
+                    <div className="d-flex align-items-center">
+                        {supported_team ? supported_team.team : "No supported team"}
+                    </div>
                     <div className="d-flex align-items-center">
                         <span>{updated_at}</span>
                         {is_owner && postPage && (

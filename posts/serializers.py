@@ -4,6 +4,13 @@ from likes.models import Like
 from supported.models import TeamsList
 
 
+class TeamsListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TeamsList
+        fields = [
+            'id', 'team', 
+        ]
+
 class PostSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
@@ -12,7 +19,7 @@ class PostSerializer(serializers.ModelSerializer):
     like_id = serializers.SerializerMethodField()
     likes_count = serializers.ReadOnlyField()
     comments_count = serializers.ReadOnlyField()
-    supported_team = serializers.ReadOnlyField(source='owner.supported_team')
+    supported_team = TeamsListSerializer()
 
     def validate_image(self, value):
         if value.size > 1024 * 1024 * 2:
