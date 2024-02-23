@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+/* eslint-disable no-unused-vars */
+
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
@@ -7,7 +9,7 @@ import Container from "react-bootstrap/Container";
 import appStyles from "../../App.module.css";
 import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
-//eslint-disable-next-line
+// eslint-disable-next-line
 import Post from "./Post";
 import Comment from "../comments/Comment";
 
