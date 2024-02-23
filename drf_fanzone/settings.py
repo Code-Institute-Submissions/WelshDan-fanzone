@@ -57,7 +57,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = 'DEBUG' in os.environ
 
 ALLOWED_HOSTS = [
-    os.environ.get('ALLOWED_HOSTS'),
+    os.environ.get('ALLOWED_HOST'),
     'localhost',
     'drf-fanzone-dfbf06e05b90.herokuapp.com',
     '8000-welshdan-fanzone-6b7lriqhy8h.ws-eu108.gitpod.io'
@@ -66,7 +66,6 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
-    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -82,6 +81,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'dj_rest_auth.registration',
     'django.contrib.staticfiles',
+    'corsheaders',
     'cloudinary_storage',
     'cloudinary',
     'imagekit',
@@ -97,7 +97,6 @@ SITE_ID = 1
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -195,7 +194,6 @@ STATICFILES_STORAGE = (
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-WHITENOISE_ROOT = BASE_DIR / 'staticfiles' / 'build'
 
 # MEDIA Files on Cloudinary
 CLOUDINARY_STORAGE = {
