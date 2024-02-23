@@ -59,7 +59,8 @@ DEBUG = 'DEBUG' in os.environ
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOSTS'),
     'localhost',
-    '8000-welshdan-fanzone-6b7lriqhy8h.ws-eu108.gitpod.io' 
+    'drf-fanzone-dfbf06e05b90.herokuapp.com',
+    '8000-welshdan-fanzone-6b7lriqhy8h.ws-eu108.gitpod.io'
 ]
 
 # Application definition
@@ -80,8 +81,8 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'dj_rest_auth.registration',
-    'cloudinary_storage',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
     'cloudinary',
     'imagekit',
     'profiles',
@@ -201,6 +202,7 @@ CLOUDINARY_STORAGE = {
     'CLOUDINARY_URL': os.environ.get('CLOUDINARY_URL')
 }
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
