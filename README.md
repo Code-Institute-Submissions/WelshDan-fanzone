@@ -476,7 +476,6 @@ And also the localhost: 8000 (API for DRF), was checked for the following things
 - Profiles were created correctly
 - Posts were created correctly
 
-
 #### 4.2 Version Control: Usage of Git and Githug for version control, incl explanation of commit messages
 
 The goal was to add and commit after changes and to push after several changes were made. As CodeAnywhere became more unpredictable then the pushes became more frequent.
@@ -512,7 +511,7 @@ Testing results:
 
 **Test Profiles**
 
-For the purpose of development I have used the inlog for Sam
+For the purpose of development I have used the inlog for Sam with the password of SamPassword
 
 Admin
 
