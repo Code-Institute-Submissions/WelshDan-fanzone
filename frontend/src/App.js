@@ -39,7 +39,7 @@ function App() {
             render={() => (
               <PostsPage
                 message="No results found. Changed your team in your profile to see results."
-                filter={`supported_team__team=${team_name}&ordering=-likes__created_at`}
+                filter={`profile__supported_team=${team_name}&ordering=-likes__created_at`}
               />
             )}
           />

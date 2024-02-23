@@ -487,6 +487,9 @@ My aim was to use a descriptive word at the start of the commits to explain as e
 
 There are a few errors and bugs remaining:
 
+- the supported function does not operate correctly. There is a makeshift list solution in ProfilePage.js to show the supported team of the profile instead of code.
+- the supported filter feed also does not function correctly.
+
 - The profile avatar is not connecting in posts and show only a broken image icon
 - On logging out, the home feed is still shown. Users cannot however comment on posts
 - Automatic tests were not added to all functions

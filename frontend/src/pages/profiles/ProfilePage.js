@@ -33,6 +33,29 @@ function ProfilePage() {
     const [profile] = pageProfile.results;
     const is_owner = currentUser?.username === profile?.owner;
 
+    const emergencyTeams = [
+        {team_id: 1, team_name: "arsenal"},
+        {team_id: 2, team_name: "aston_villa"},
+        {team_id: 3, team_name: "bournemouth"},
+        {team_id: 4, team_name: "brentford"},
+        {team_id: 5, team_name: "brighton"},
+        {team_id: 6, team_name: "burnley"},
+        {team_id: 7, team_name: "chelsea"},
+        {team_id: 8, team_name: "crystal_palace"},
+        {team_id: 9, team_name: "everton"},
+        {team_id: 10, team_name: "fulham"},
+        {team_id: 11, team_name: "liverpool"},
+        {team_id: 12, team_name: "luton_town"},
+        {team_id: 13, team_name: "man_city"},
+        {team_id: 14, team_name: "man_utd"},
+        {team_id: 15, team_name: "newcastle"},
+        {team_id: 16, team_name: "notts_forest"},
+        {team_id: 17, team_name: "sheff_utd"},
+        {team_id: 18, team_name: "tottenham"},
+        {team_id: 19, team_name: "west Ham"},
+        {team_id: 20, team_name: "wolves"},
+    ]
+
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -82,7 +105,7 @@ function ProfilePage() {
                         </Col>
                     </Row>
                     <Row className='justify-content-center no-gutters'>
-                            <div>My team: {profile?.supported_team}</div>
+                            <div>My team: {emergencyTeams.find(team => team.team_id === profile?.supported_team)?.team_name}</div>
                     </Row>
                 </Col>    
                 <Col lg={3} className="text-lg-right">
