@@ -80,8 +80,8 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'dj_rest_auth.registration',
-    'django.contrib.staticfiles',
     'corsheaders',
+    'django.contrib.staticfiles',
     'cloudinary_storage',
     'cloudinary',
     'imagekit',
@@ -97,6 +97,7 @@ SITE_ID = 1
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -187,6 +188,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+WHITENOISE_ROOT = BASE_DIR / 'staticfiles' / 'build'
 
 # MEDIA Files on Cloudinary
 CLOUDINARY_STORAGE = {
