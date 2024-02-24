@@ -435,7 +435,7 @@ I have tried to follow the guidelines as explained in this simple table from [Re
 | 12 | Front       | Add Post       | Not entering a title or a content and then clicking clear                     | Returns to previous page                                               | Yes   |                                                      |
 | 13 | Front       | Add Post       | Choosing too large a size file                                                | Returns an error message                                               | Yes   |                                                      |
 | 14 | Front       | Add Post       | Adding correct details in post and pressing "create"                          | Creates post/ user links to feed                                       | Yes   |                                                      |
-| 15 | Front       | Add Post       | After posting, avatar image, title, content are all shown                     | Avatar image, title, content created                                   | No    | Avatar image is not shown                            |
+| 15 | Front       | Add Post       | After posting, avatar image, title, content are all shown                     | Avatar image, title, content created                                   | Yes    |                               |
 | 16 | Front       | Feed           | Click on users avatar under "Most followed profiles"                          | Links to user's profile page                                           | Yes   |                                                      |
 | 17 | Front       | Feed           | Click on follow a profile                                                     | Button changes to unfollow<br>User's profile adds 1 to "following"     | Yes   |                                                      |
 | 18 | Front       | Feed           | Click to unfollow a profile                                                   | Button changes to follow<br>User's profile reduces by 1 to "following" | Yes   |                                                      |
@@ -488,8 +488,6 @@ There are a few errors and bugs remaining:
 
 - the supported function does not operate correctly. There is a makeshift list solution in ProfilePage.js to show the supported team of the profile instead of code.
 - the supported filter feed also does not function correctly.
-
-- The profile avatar is not connecting in posts and show only a broken image icon
 - On logging out, the home feed is still shown. Users cannot however comment on posts
 - Automatic tests were not added to all functions
 - Information messages have not been added
