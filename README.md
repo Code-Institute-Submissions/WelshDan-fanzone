@@ -1,6 +1,6 @@
-# Fanzone ![fanzone favicon](./frontend/public/favicon-16x16.png)
+# Fanzone
 
-![fanzone logo](./frontend/src/assets/logo.png)
+![Screenshot](static/readme-images/logo.jpg "fanzone logo")
 
 ### A social media site for football fans
 
