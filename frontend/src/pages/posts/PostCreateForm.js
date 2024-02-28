@@ -8,7 +8,6 @@ import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
 import Image from "react-bootstrap/Image";
 
-
 import Asset from "../../components/Asset";
 import Upload from "../../assets/upload.png";
 import styles from "../../styles/PostCreateEditForm.module.css";
@@ -38,6 +37,7 @@ function PostCreateForm() {
         const fetchData = async () => {
           try {
             const { data : { results } } = await axiosReq.get('/supported/');
+            
 
             setPostData(prevState => ({
               ...prevState,
@@ -77,7 +77,11 @@ function PostCreateForm() {
         formData.append("supported_team", supported_team);
         formData.append("title", title);
         formData.append("content", content);
-        formData.append("image", imageInput.current.files[0]);
+        if (imageInput.current.files.length) {
+            formData.append("image", imageInput.current.files[0]);
+        } else {
+        formData.append("image", "")
+        }
 
         try {
             const { data } = await axiosReq.post("/posts/", formData);
