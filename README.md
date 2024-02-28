@@ -12,7 +12,7 @@ The goal with Fanzone was to create a simple social media site with the usual
 post, comment and like functions but with the twist of being able to support a
 specific team to also see a feed with only posts about that certain team.
 
-### Click here to view [Fanzone](https://fanzone-ceb2b022a19f.herokuapp.com/)
+### Click here to view [Fanzone](https://drf-fanzone-dfbf06e05b90.herokuapp.com)
 
 ---
 

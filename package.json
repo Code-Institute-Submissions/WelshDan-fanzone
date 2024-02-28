@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WelshDan/drf-fanzone.git"
+    "url": "git+https://github.com/WelshDan/fanzone.git"
   },
   "keywords": [
     "fanzone",
@@ -20,7 +20,7 @@
   "author": "dan roberts",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/WelshDan/drf-fanzone/issues"
+    "url": "https://github.com/WelshDan/fanzone/issues"
   },
-  "homepage": "https://github.com/WelshDan/drf-fanzone#readme"
+  "homepage": "https://github.com/WelshDan/fanzone#readme"
 }

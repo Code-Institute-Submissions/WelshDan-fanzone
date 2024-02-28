@@ -60,7 +60,7 @@ ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
     'localhost',
     'drf-fanzone-dfbf06e05b90.herokuapp.com',
-    '8000-welshdan-fanzone-6b7lriqhy8h.ws-eu108.gitpod.io'
+    '8000-welshdan-fanzone-6b7lriqhy8h.ws-eu108.gitpod.io',
 ]
 
 # Application definition
